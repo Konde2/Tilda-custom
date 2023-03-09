@@ -1,0 +1,95 @@
+<style>
+    .t915 .t-feed__buttons-wrapper {
+        margin-top: 30px;
+        /* justify-content: left; */
+    }
+    .t915 .t-feed__button-wrapper .t-btn_md {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .t915 .js-feed-container {
+        border-radius: 23px;
+        padding: 50px 30px;
+        background-color: #ebeef1;
+    }
+
+
+    .t-feed__col-grid__wrapper {
+        justify-content: space-between;
+    }
+
+    .t915 .t-feed__grid-separator {
+        margin-bottom: 50px;
+    }
+
+    .button-read {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 26px;
+
+    }
+
+    .button-read img{
+        width: 100%;
+    }
+
+    .t-feed__post-title {
+
+        min-height: 31px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .t-feed__post-descr {
+        min-height: 38px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .t-feed__post-label-wrapper .t-feed__post-label {
+        backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 960px) {
+
+        .t915 .t-feed__buttons-wrapper {
+            display:none;
+        }
+
+    }
+
+    @media (max-width: 760px) {
+
+        .t915 .js-feed-container {
+            border-radius: 0px;
+        }
+
+    }
+
+</style>
+
+<script>
+
+    // Функция добавляет кнопку "Читать полностью" ко всем статьям
+
+    setInterval(function(){ // ожидание подгрузки постов
+
+        $(".t-feed__col-grid__post-wrapper").each(function() {
+
+            if($(this).find(".button-read").length == 0) {
+
+                $(this).append($('<div class="button-read"><img src="https://static.tildacdn.com/tild3130-3432-4633-b462-616633656264/Group_2023.svg"></div>'));
+
+            }
+
+        });
+
+
+    }, 500);
+
+</script>
